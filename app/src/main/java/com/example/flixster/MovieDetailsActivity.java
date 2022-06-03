@@ -65,15 +65,18 @@ public class MovieDetailsActivity extends AppCompatActivity{
 
     }
 
+    // button click command to go back to home page
     public void backToMain(View v) {
         Intent intent = new Intent(this, MainActivity.class);
-//      startActivity(intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
         this.startActivity(intent);
     }
 
+    // button click command to open Youtube player
     public void openTrailer(View v) {
         Intent intent = new Intent(this, MovieTrailerActivity.class);
-//      startActivity(intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+        // serialize the movie using parceler, use its short name as a key
+        intent.putExtra(Movie.class.getSimpleName(), Parcels.wrap(movie));
+        // show the activity
         this.startActivity(intent);
     }
 

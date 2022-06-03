@@ -37,7 +37,8 @@
         android:layout_height="200dp"
         android:layout_below="@id/rbVoteAverage"
         tools:srcCompat="@tools:sample/backgrounds/scenic"
-        android:layout_marginVertical="10dp" />
+        android:layout_marginVertical="10dp"
+        android:onClick="openTrailer"/>
 
     <TextView
         android:id="@+id/tvOverview"
