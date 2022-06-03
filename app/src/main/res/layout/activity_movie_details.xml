@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MovieDetailsActivity">
+    tools:context=".MovieDetailsActivity"
+    android:layout_margin="20dp">
 
     <TextView
         android:id="@+id/tvTitle"
@@ -16,7 +17,8 @@
         android:text="Movie Title"
         android:textAppearance="@android:style/TextAppearance.Large"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginVertical="10dp"/>
 
     <RatingBar
         android:id="@+id/rbVoteAverage"
@@ -34,7 +36,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/rbVoteAverage"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        tools:srcCompat="@tools:sample/backgrounds/scenic"
+        android:layout_marginVertical="10dp" />
 
     <TextView
         android:id="@+id/tvOverview"
@@ -45,6 +48,14 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:text="TextView" />
+        android:text="TextView"
+        android:layout_marginVertical="10dp"/>
+
+    <Button
+        android:id="@+id/ivBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_below="@+id/tvOverview"/>
 
 </RelativeLayout>

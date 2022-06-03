@@ -1,10 +1,14 @@
 package com.example.flixster;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -14,7 +18,7 @@ import com.example.flixster.models.Movie;
 
 import org.parceler.Parcels;
 
-public class MovieDetailsActivity extends AppCompatActivity {
+public class MovieDetailsActivity extends AppCompatActivity implements View.OnClickListener {
     // the movie to display
     Movie movie;
     Context context;
@@ -25,6 +29,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
     TextView tvOverview;
     RatingBar rbVoteAverage;
     ImageView ivDetailPoster;
+    Button ivBackButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +41,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
         tvOverview = (TextView) findViewById(R.id.tvOverview);
         rbVoteAverage = (RatingBar) findViewById(R.id.rbVoteAverage);
         ivDetailPoster = (ImageView) findViewById(R.id.ivDetailPoster);
+        ivBackButton = (Button) findViewById(R.id.ivBackButton);
 
         movie = (Movie) Parcels.unwrap(getIntent().getParcelableExtra(Movie.class.getSimpleName()));
         Log.d("MovieDetailsActivity", String.format("Showing details for '%s'", movie.getTitle()));
@@ -53,5 +59,14 @@ public class MovieDetailsActivity extends AppCompatActivity {
         Glide.with(this).load(imageUrl)
                 .placeholder(R.drawable.flicks_movie_placeholder)
                 .into(ivDetailPoster);
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v == ivBackButton){
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+            this.startActivity(intent);
+        }
     }
 }
