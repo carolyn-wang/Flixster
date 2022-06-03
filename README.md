@@ -24,7 +24,7 @@ The following **stretch** features are implemented:
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you can get done to improve the app functionality!
+* [X] List anything else that you can get done to improve the app functionality!
 * [X] Back button to return from DetailsActivity to MainActivity page
 * [X] Added image to movie details page
 
