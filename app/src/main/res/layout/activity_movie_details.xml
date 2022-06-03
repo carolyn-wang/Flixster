@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.codepath.flicks.MovieDetailsActivity">
+    tools:context=".MovieDetailsActivity">
 
     <TextView
         android:id="@+id/tvTitle"
@@ -22,12 +22,12 @@
         android:id="@+id/tvOverview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:layout_below="@+id/rbVoteAverage"
-        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/detailPoster"
         android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:text="TextView" />
 
     <RatingBar
         android:id="@+id/rbVoteAverage"
@@ -39,4 +39,12 @@
         android:layout_below="@+id/tvTitle"
         android:numStars="5"
         android:stepSize="0.5" />
+
+    <ImageView
+        android:id="@+id/ivDetailPoster"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_below="@id/rbVoteAverage"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
 </RelativeLayout>
