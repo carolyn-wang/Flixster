@@ -39,7 +39,7 @@ GIF created with [Kap](https://getkap.co/).
 ## Notes
 
 Describe any challenges encountered while building the app.
-I found it difficult to get the Youtube API to connect properly. I was able to pass in the movie ID through a parcel and to parse the trailer URL from the Youtube API, but I had trouble sorting out when exactly to call the videos endpoint. My video URL would never be updated and my default trailer would always play. I'm still currently debugging this.
+I found it difficult to get the Youtube API to connect properly. I was able to pass in the movie ID through a parcel and to parse the trailer URL from the Youtube API, but I had trouble sorting out when exactly to call the videos endpoint. I ended up debuggin this with the TAs and it turned out that I was calling my methods in the wrong order. 
 
 In addition, I had trouble getting the .gitignore files to actually ignore my secrets.xml files (which contained my API keys). 
 
