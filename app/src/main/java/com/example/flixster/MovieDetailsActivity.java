@@ -15,6 +15,9 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.flixster.models.Movie;
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
+import com.google.android.youtube.player.YouTubePlayerView;
 
 import org.parceler.Parcels;
 
@@ -59,11 +62,17 @@ public class MovieDetailsActivity extends AppCompatActivity{
         Glide.with(this).load(imageUrl)
                 .placeholder(R.drawable.flicks_movie_placeholder)
                 .into(ivDetailPoster);
+
     }
 
-//    @Override
     public void backToMain(View v) {
         Intent intent = new Intent(this, MainActivity.class);
+//      startActivity(intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+        this.startActivity(intent);
+    }
+
+    public void openTrailer(View v) {
+        Intent intent = new Intent(this, MovieTrailerActivity.class);
 //      startActivity(intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
         this.startActivity(intent);
     }
