@@ -3,6 +3,7 @@ package com.example.flixster.adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -21,6 +22,7 @@ import com.example.flixster.models.Movie;
 import org.parceler.Parcels;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> {
 
@@ -72,18 +74,22 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             itemView.setOnClickListener(this);
         }
 
-        public void bind(Movie movie) {
+        public void bind(Movie movie){
             tvTitle.setText(movie.getTitle());
             tvOverview.setText(movie.getOverview());
             String imageUrl;
             // if phone in landscape, imageUrl = backdrop image
             if (context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
                 imageUrl = movie.getBackdropPath();
+                // default image holder
+                Glide.with(context).load("").placeholder(R.drawable.flicks_backdrop_placeholder).into(ivPoster);
             } else {
                 // else imageUrl = poster image
                 imageUrl = movie.getPosterPath();
+                // default image holder
+                Glide.with(context).load(imageUrl).placeholder(R.drawable.flicks_movie_placeholder).into(ivPoster);
             }
-            Glide.with(context).load(imageUrl).into(ivPoster);
+
         }
 
         @Override
