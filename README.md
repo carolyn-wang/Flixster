@@ -20,7 +20,7 @@ The following **stretch** features are implemented:
 * [X] Improved the user interface by experimenting with styling and coloring.
 * [X] Apply rounded corners for the poster or background images using [Glide transformations](https://guides.codepath.org/android/Displaying-Images-with-the-Glide-Library#transformations)
 * [ ] Apply the popular [View Binding annotation library](http://guides.codepath.org/android/Reducing-View-Boilerplate-with-ViewBinding) to reduce boilerplate code.
-* [ ] Allow video trailers to be played in full-screen using the YouTubePlayerView from the details screen.
+* [X] Allow video trailers to be played in full-screen using the YouTubePlayerView from the details screen.
 
 The following **additional** features are implemented:
 
@@ -39,6 +39,9 @@ GIF created with [Kap](https://getkap.co/).
 ## Notes
 
 Describe any challenges encountered while building the app.
+I found it difficult to get the Youtube API to connect properly. I was able to pass in the movie ID through a parcel and to parse the trailer URL from the Youtube API, but I had trouble sorting out when exactly to call the videos endpoint. My video URL would never be updated and my default trailer would always play. I'm still currently debugging this.
+
+In addition, I had trouble getting the .gitignore files to actually ignore my secrets.xml files (which contained my API keys). 
 
 ## Open-source libraries used
 
