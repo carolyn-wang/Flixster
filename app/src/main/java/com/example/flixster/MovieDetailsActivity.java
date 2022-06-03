@@ -63,12 +63,9 @@ public class MovieDetailsActivity extends AppCompatActivity{
 
 //    @Override
     public void backToMain(View v) {
-        if (v == ivBackButton){
-            Log.i("MovieDetailButton","clicked button");
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
-            this.startActivity(intent);
-        }
+        Intent intent = new Intent(this, MainActivity.class);
+//      startActivity(intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+        this.startActivity(intent);
     }
 
 }
