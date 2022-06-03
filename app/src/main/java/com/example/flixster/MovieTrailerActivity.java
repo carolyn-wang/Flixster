@@ -11,7 +11,6 @@ import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
 public class MovieTrailerActivity extends YouTubeBaseActivity {
-    final String YOUTUBE_API_KEY = "SUXWAEX2jlg";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +24,7 @@ public class MovieTrailerActivity extends YouTubeBaseActivity {
         YouTubePlayerView playerView = (YouTubePlayerView) findViewById(R.id.player);
 
         // initialize with API key stored in secrets.xml
-        playerView.initialize(YOUTUBE_API_KEY, new YouTubePlayer.OnInitializedListener() {
+        playerView.initialize(getString(R.string.youtube_api_key), new YouTubePlayer.OnInitializedListener() {
             @Override
             public void onInitializationSuccess(YouTubePlayer.Provider provider,
                                                 YouTubePlayer youTubePlayer, boolean b) {

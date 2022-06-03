@@ -9,6 +9,7 @@
         <entry key="app/src/main/res/layout/activity_movie_details.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_movie_trailer.xml" value="0.16041666666666668" />
         <entry key="app/src/main/res/layout/item_movie.xml" value="0.35875244140625007" />
+        <entry key="app/src/main/res/xml/secrets.xml" value="0.16691995947315097" />
       </map>
     </option>
   </component>
