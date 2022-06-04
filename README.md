@@ -31,9 +31,8 @@ The following **additional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/69578355/171968340-4a804223-81cd-4f76-b3b9-1bce265f5be1.gif)
 
-<!-- <img src='https://submissions.us-east-1.linodeobjects.com/metau_android/OdgK5xt0.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /> -->
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/69578355/171968340-4a804223-81cd-4f76-b3b9-1bce265f5be1.gif)
 
 GIF created with [Kap](https://getkap.co/).
 
